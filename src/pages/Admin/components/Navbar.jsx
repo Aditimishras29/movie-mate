@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { CgMenuGridO } from "react-icons/cg";
 import { ImCancelCircle } from "react-icons/im";
+import Image from "next/image";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,14 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
         {/* Left Side: MovieMate Logo */}
         <div className="text-white text-2xl font-bold">
-          <Link href="/">MovieMate</Link>
+          <Link href="/">
+            <Image
+              src="/download.png"
+              width={250}
+              height ={50}
+              alt="Picture of the author"
+            />
+          </Link>
         </div>
 
         {/* Right Side: Menu Items and Login Button */}
